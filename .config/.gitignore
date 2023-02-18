@@ -1,0 +1,17 @@
+coc/
+configstore/
+gh/
+gitui/
+iterm2/
+octave/
+yarn/
+.mono/
+neofetch/
+xbuild/
+gtk-2.0/
+ParaView/
+raycast/
+Microsoft*VisualStudio*Services
+flutter/
+efm-langserver/
+ghc/
