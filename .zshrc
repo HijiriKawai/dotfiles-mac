@@ -37,6 +37,7 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 
 # setting
+export XDG_CONFIG_HOME="$HOME/.config"
 export LANG=ja_JP.UTF-8
 setopt AUTO_PARAM_KEYS
 setopt AUTO_CD
