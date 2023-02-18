@@ -1,6 +1,6 @@
 DOTPATH    := $(realpath $(dir $(lastword $(MAKEFILE_LIST))))
 CANDIDATES := $(wildcard .??*) bin
-EXCLUSIONS := .DS_Store .git .gitmodules .gitignore .travis.yml .vscode .czrc .commitlintrc.json
+EXCLUSIONS := .DS_Store .git .gitmodules .gitignore .travis.yml .vscode .pre-commit-config.yaml .cz.toml
 DOTFILES   := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
 
 .DEFAULT_GOAL := help
