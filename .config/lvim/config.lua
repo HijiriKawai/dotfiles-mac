@@ -2,7 +2,6 @@
  THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
  `lvim` is the global options object
 ]]
-
 -- vim options
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
@@ -12,8 +11,6 @@ vim.opt.relativenumber = true
 lvim.log.level = "info"
 lvim.format_on_save = {
   enabled = true,
-  pattern = "*.lua",
-  timeout = 1000,
 }
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
@@ -57,6 +54,22 @@ lvim.builtin.treesitter.auto_install = true
 -- vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "pyright" })
 -- local opts = {} -- check the lspconfig documentation for a list of all possible options
 -- require("lvim.lsp.manager").setup("pyright", opts)
+
+vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "tailwindcss" })
+local opts = {
+  root_dir = function(fname)
+    local util = require "lspconfig/util"
+    return util.root_pattern("assets/tailwind.config.js", "tailwind.config.js", "tailwind.config.cjs", "tailwind.js",
+          "tailwind.cjs")(fname)
+  end,
+  init_options = {
+    userLanguages = { heex = "html", elixir = "html" }
+  },
+}
+require("lvim.lsp.manager").setup("tailwindcss", opts)
+require 'lspconfig'.html.setup {
+  filetypes = { "html", "heex" }
+}
 
 -- ---remove a server from the skipped list, e.g. eslint, or emmet_ls. IMPORTANT: Requires `:LvimCacheReset` to take effect
 -- ---`:LvimInfo` lists which server(s) are skipped for the current filetype
