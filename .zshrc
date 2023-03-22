@@ -54,6 +54,7 @@ export PATH="/opt/homebrew/lib/ruby/gems/3.1.0/bin:$PATH"
 export PATH="/Users/hijiri/go/bin:$PATH"
 export PATH="/Users/hijiri/.local/bin:$PATH"
 export PATH="$PATH:/Users/hijiri/.ghcup/bin"
+export PATH="$PATH":"$HOME/.pub-cache/bin"
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 fpath+=~/.zfunc
 
