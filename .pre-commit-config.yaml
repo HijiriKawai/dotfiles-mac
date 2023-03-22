@@ -4,7 +4,7 @@ repos:
         stages:
           - commit-msg
     repo: https://github.com/commitizen-tools/commitizen
-    rev: master
+    rev: v2.42.1
   - hooks:
       - additional_dependencies:
           - "@commitlint/config-conventional"
