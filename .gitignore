@@ -3,3 +3,5 @@ node_modules/
 
 .config/Microsoft\VisualStudio Services
 .DS_Store
+.config/lazygit
+.config/tool_state
