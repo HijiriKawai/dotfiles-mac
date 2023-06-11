@@ -17,6 +17,7 @@ install: ## Create symlink to home directory
 	@echo '==> brew install tools'
 	@echo ''
 	@brew bundle --global
+	@git clone https://github.com/HijiriKawai/AstroNvim-conf.git ~/.config/nvim/lua/user
 
 brewfile:
 	@echo 'make or update .Brewfile'
