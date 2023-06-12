@@ -18,7 +18,9 @@ install: ## Create symlink to home directory
 	@echo ''
 	@brew bundle --global
 	@git clone https://github.com/HijiriKawai/AstroNvim-conf.git ~/.config/nvim/lua/user
-
+	@chmod -R +x ~/bin
+	@~/bin/asdf-setup-languages.sh
+	
 brewfile:
 	@echo 'make or update .Brewfile'
 	@brew bundle dump --global --force
