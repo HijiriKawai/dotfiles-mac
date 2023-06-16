@@ -17,7 +17,10 @@ install: ## Create symlink to home directory
 	@echo '==> brew install tools'
 	@echo ''
 	@brew bundle --global
+	@echo '==> install AstroNvim and AstroNvim-conf'
+	@git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 	@git clone https://github.com/HijiriKawai/AstroNvim-conf.git ~/.config/nvim/lua/user
+	@echo '==> install languages with asdf'
 	@chmod -R +x ~/bin
 	@~/bin/asdf-setup-languages.sh
 	
