@@ -26,7 +26,10 @@ export PATH="/Users/hijiri/go/bin:$PATH"
 export PATH="/Users/hijiri/.local/bin:$PATH"
 export PATH="$PATH:/Users/hijiri/.ghcup/bin"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+eval "$(/opt/homebrew/bin/rtx activate zsh)"
+export RTX_DATA_DIR=$HOME/.rtx
+export RTX_CACHE_DIR=$RTX_DATA_DIR/cache
+export PATH="$HOME/.local/share/rtx/shims:$PATH"
 fpath+=~/.zfunc
 
 # alias

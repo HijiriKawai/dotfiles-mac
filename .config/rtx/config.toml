@@ -1,0 +1,9 @@
+[tools]
+deno = "latest"
+elixir = "latest"
+flutter = "latest"
+golang = "latest"
+node = "latest"
+python = "latest"
+rust = "latest"
+yarn = "latest"
