@@ -21,10 +21,10 @@ export PATH="/Users/hijiri/go/bin:$PATH"
 export PATH="/Users/hijiri/.local/bin:$PATH"
 export PATH="$PATH:/Users/hijiri/.ghcup/bin"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
-eval "$(/opt/homebrew/bin/rtx activate zsh)"
-export RTX_DATA_DIR=$HOME/.rtx
-export RTX_CACHE_DIR=$RTX_DATA_DIR/cache
-export PATH="$HOME/.local/share/rtx/shims:$PATH"
+eval "$(/opt/homebrew/bin/mise activate zsh)"
+export MISE_DATA_DIR=$HOME/.mise
+export MISE_CACHE_DIR=$MISE_DATA_DIR/cache
+export PATH="$HOME/.local/share/mise/shims:$PATH"
 fpath+=~/.zfunc
 eval "$(sheldon source)"
 export PATH=/usr/X11/bin:$PATH
