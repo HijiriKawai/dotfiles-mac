@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 export PATH=/usr/local/bin/git:$PATH
 
 # setting
@@ -25,6 +27,7 @@ export RTX_CACHE_DIR=$RTX_DATA_DIR/cache
 export PATH="$HOME/.local/share/rtx/shims:$PATH"
 fpath+=~/.zfunc
 eval "$(sheldon source)"
+export PATH=/usr/X11/bin:$PATH
 
 # alias
 alias e='exa --icons --git'
@@ -52,6 +55,7 @@ alias vi='nvim'
 alias vz='nvim ~/.zshrc'
 # alias vim='nvim'
 alias python=python3
+alias walk='walk --icons' 
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
@@ -62,3 +66,14 @@ export PATH="$HOME/.poetry/bin:$PATH"
 if (which zprof > /dev/null 2>&1) ;then
   zprof
 fi
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+
+
+# walk setting
+function lk {
+  cd "$(walk "$@")"
+}
+
+export WALK_EDITOR=code
