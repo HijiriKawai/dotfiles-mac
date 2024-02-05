@@ -20,9 +20,13 @@ install: ## Create symlink to home directory
 	@echo '==> install AstroNvim and AstroNvim-conf'
 	@git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 	@git clone https://github.com/HijiriKawai/AstroNvim-conf.git ~/.config/nvim/lua/user
-	@echo '==> install languages with rtx'
+	@echo '==> install languages'
+	@curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+	@source "$HOME/.cargo/env"
+	@rustup self update
+	@rustup update
 	@chmod -R +x ~/bin
-	@~/bin/rtx-setup-language.sh
+	@~/bin/mise-setup-language.sh
 	
 brewfile:
 	@echo 'make or update .Brewfile'
