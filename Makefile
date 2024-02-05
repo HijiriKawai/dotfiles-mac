@@ -23,7 +23,7 @@ install: ## Create symlink to home directory
 	@git clone https://github.com/HijiriKawai/AstroNvim-conf.git ~/.config/nvim/lua/user
 	@echo '==> install languages'
 	@curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-	@source "$HOME/.cargo/env"
+	@source "$(HOME)/.cargo/env"
 	@rustup self update
 	@rustup update
 	@chmod -R +x ~/bin
