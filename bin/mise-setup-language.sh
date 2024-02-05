@@ -2,7 +2,7 @@
 
 echo "install and update languages with mise."
 
-languages=("deno" "elixir" "erlang" "flutter" "golang" "node" "python" "rust" "pnpm" "dotnet-core")
+languages=("deno" "elixir" "erlang" "flutter" "golang" "node" "python" "pnpm" "dotnet-core")
 
 
 for language in $languages; do
