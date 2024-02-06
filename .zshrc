@@ -28,6 +28,7 @@ export PATH="$HOME/.local/share/mise/shims:$PATH"
 fpath+=~/.zfunc
 eval "$(sheldon source)"
 export PATH=/usr/X11/bin:$PATH
+source ~/.cargo/env
 
 # alias
 alias e='exa --icons --git'
