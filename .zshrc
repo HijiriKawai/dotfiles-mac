@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 export PATH=/usr/local/bin/git:$PATH
 
 # setting
@@ -12,6 +10,7 @@ colors
 
 
 # path
+eval "$(echo $CARGO_HOME)"
 export PATH=$PATH:/Users/hijiri/bin/
 export PATH="/Users/hijiri/.deno/bin:$PATH"
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
@@ -22,13 +21,12 @@ export PATH="/Users/hijiri/.local/bin:$PATH"
 export PATH="$PATH:/Users/hijiri/.ghcup/bin"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 eval "$(/opt/homebrew/bin/mise activate zsh)"
-export MISE_DATA_DIR=$HOME/.mise
-export MISE_CACHE_DIR=$MISE_DATA_DIR/cache
+export MISE_DATA_DIR="$HOME/.mise"
+export MISE_CACHE_DIR="$MISE_DATA_DIR/cache"
 export PATH="$HOME/.local/share/mise/shims:$PATH"
 fpath+=~/.zfunc
 eval "$(sheldon source)"
 export PATH=/usr/X11/bin:$PATH
-source ~/.cargo/env
 
 # alias
 alias e='exa --icons --git'
@@ -67,10 +65,6 @@ export PATH="$HOME/.poetry/bin:$PATH"
 if (which zprof > /dev/null 2>&1) ;then
   zprof
 fi
-
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-
 
 # walk setting
 function lk {
