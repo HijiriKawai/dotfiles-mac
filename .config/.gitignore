@@ -15,3 +15,5 @@ Microsoft*VisualStudio*Services
 flutter/
 efm-langserver/
 ghc/
+zed/embeddings
+zed/.tmp*
