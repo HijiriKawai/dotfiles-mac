@@ -20,10 +20,13 @@ export PATH="/Users/hijiri/go/bin:$PATH"
 export PATH="/Users/hijiri/.local/bin:$PATH"
 export PATH="$PATH:/Users/hijiri/.ghcup/bin"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
+export PATH="$PATH:/Users/hijiri/.mise/installs"
 eval "$(/opt/homebrew/bin/mise activate zsh)"
+eval "$(mise activate zsh --shims)"
 export MISE_DATA_DIR="$HOME/.mise"
 export MISE_CACHE_DIR="$MISE_DATA_DIR/cache"
 export PATH="$HOME/.local/share/mise/shims:$PATH"
+export PATH="$PATH:/Users/hijiri/.dotnet/tools"
 fpath+=~/.zfunc
 eval "$(sheldon source)"
 export PATH=/usr/X11/bin:$PATH

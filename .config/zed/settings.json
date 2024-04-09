@@ -7,7 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-    "theme": "Atelier Dune Dark",
+    "theme": "Andromeda",
     "buffer_font_family": "SauceCodePro Nerd Font",
     "buffer_font_size": 15
 }
